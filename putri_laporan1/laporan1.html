@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Teori</title>
+</head>
+<body>
+    <h1 style="color: rgb(54, 108, 225); text-align: center;"><u>Laporan Teori</u></h1>
+    <br>
+    <ol>
+        <li style="color: rgb(54, 108, 225);">
+            <u>Pertanyaan seputar <i>tag</i></u>
+            <ol type="a" style="color: black;">
+                <li>Apa yang dimaksud dengan <i>tag</i> pada HTML?</li>
+                <li>Apa itu pembuka dan penutup <i>tag</i>? Apakah hal tersebut ada pada semua jenis <i>tag</i>?</li>
+            </ol>
+            <br>
+        </li>
+        <li style="color: rgb(54, 108, 225);">
+            <u>Pertanyaan seputar <i>element</i></u>
+            <ol type="a" style="color: black;">
+                <li>Apa yang dimaksud dengan <i>element</i>?</li>
+                <li>Apa yang dimaksud dengan <i><b>tagname, attribute dan content</b></i> pada <i>element</i>?</li>
+                <li>Apakah <i>elemen</i> dapat ditumpuk? Apa yang terjadi bila demikian?</li>
+            </ol>
+            <br><br>
+        </li>
+        <li style="color: rgb(54, 108, 225);">
+            <u>Pertanyaan seputar <i>anchor</i></u>
+            <ol type="a" style="color: black;">
+                <li>Apa yang dimaksud dengan <i>anchor</i>?</li>
+                <li>Bagaimana caranya <i>anchor</i> dapat berfungsi, baik dari sisi pendefinisian maupun penerapannya?</li>
+            </ol>
+            <br><br>
+        </li>
+    </ol>
+    <p style="color: rgb(54, 108, 225); text-align: center;">
+        4. <u>Pertanyaan seputar <i>multimedia</i></u>
+    </p>
+    <table style="margin: 0 auto; text-align: left;">
+        <tr>
+            <td width="80px"> A. <i>Text</i></td>
+            <td> B. <i>Image</i></td>
+            <td> C. <i>Audio</i></td>
+            <td> D. <i>Video</i></td>
+        </tr>
+        <tr>
+            <td width="180px">
+                <ul>
+                    <li>Sebutkan <i>tag</i> yang dapat digunakan untuk memanipulasi konten teks pada HTML dan jelaskan fungsinya singkat!</li>
+                    <li>Sebutkan <i>tag</i> yang dapat digunakan untuk memanipulasi struktur konten teks pada HTML!</li>
+                </ul>
+            </td>
+            <td width="180px">
+                <ul>
+                    <li>Jika sebuah <i>tag image</i> tidak menampilkan gambar sebagaimana mestinya, apa saja yang mungkin menjadi penyebab?</li>
+                    <li>Jika ada teks yang menggantikan gambar, apa yang sebenarnya terjadi?</li>
+                </ul>
+            </td>
+            <td width="180px">
+                <ul>
+                    <li>Bagaimana caranya untuk memasukkan sumber audio dari web (non-lokal)?</li>
+                </ul>
+            </td>
+            <td width="180px">
+                <ul>
+                    <li>Apa yang biasanya terjadi jika atribut autoplay pada tag video tidak berjalan? Apa yang perlu dilakukan agar atribut tersebut berfungsi?</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <h1 style="text-align: center; color: rgb(22, 21, 21);">Data Diri</h1>
+    <form id="myForm" action="celebration-gif.webp">
+        <table>
+            <tr>
+                <td><label for="nama">Nama Mahasiswa</label></td>
+                <td><input type="text" name="nama" id="nama" required autofocus></td>
+            </tr>
+            <tr>
+                <td><label for="nim">NIM Mahasiswa</label></td>
+                <td><input type="text" name="nim" id="nim" pattern="[0-9]{9}" required title="Diisi dengan 9 angka"></td>
+            </tr>
+            <tr>
+                <td><label for="t">Tanggal</label></td>
+                <td><input type="date" name="t" id="t"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+        </table>
+    </form>
+
+    <img id="celebration" src="celebration-gif.gif" alt="Celebration"><style>
+        table td {
+            text-align: left;
+            vertical-align: top; 
+        }
+        
+        #celebration {
+            display: none; 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000; 
+        }
+    </style>
+</head>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            document.getElementById('celebration').style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>
